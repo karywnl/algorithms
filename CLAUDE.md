@@ -22,6 +22,17 @@ garbage collection).
 4. Visuals (diagrams/tables in text) welcome when they clarify structure
    (e.g. memory layout, pointer diagrams).
 5. End with a small exercise for the student to do in VS Code.
+6. **Understanding check, before marking a topic done**: once the student has
+   coded something (even copied from a reference like GeeksforGeeks), don't
+   accept a working compile as proof of understanding. Ask them to:
+   a. Verbally trace a *new* example out loud, in plain words, no code/no
+      reference in front of them — proves they can reconstruct the logic,
+      not just recognize it.
+   b. Answer a "twist" question that requires adapting the logic to a
+      changed scenario (e.g. ascending → descending, recursive → iterative)
+      and explain *why* only that piece changes.
+   This catches the "I can compile it but I'm just pattern-matching from the
+   tutorial" gap. Do this every time, not just when the student seems stuck.
 
 ## Pacing rules
 - One concept at a time. Do not bundle multiple new ideas into one response.
