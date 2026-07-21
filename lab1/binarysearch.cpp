@@ -1,48 +1,62 @@
 #include <iostream>
+#include <fstream>
+#include <vector>
+#include <chrono>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
-int binary_search(int arr[], int target, int n){
+vector<int> generate_sorted_array(int n){
+	vector<int> arr(n);
+	for (int i = 0; i < n; i++){
+		arr[i] = i;
+	}
+	return arr;
+}
 
+int binary_search(vector<int>& arr, int target){
 	int low_idx = 0;
-	int high_idx = n - 1;
+	int high_idx = arr.size() - 1;
 
 	while (low_idx <= high_idx){
-
 		int mid_idx = low_idx + (high_idx - low_idx) / 2;
 
 		if (arr[mid_idx] == target){
 			return mid_idx;
 		}
-
 		else if (target < arr[mid_idx]){
 			high_idx = mid_idx - 1;
 		}
-
 		else{
 			low_idx = mid_idx + 1;
 		}
-		
 	}
 
 	return -1;
 }
 
-
 int main(){
 
-	int arr[] = { 2, 3, 4, 10, 40 };
-	int target = 10;
+	srand(time(0));
 
-	int n =	sizeof(arr)/sizeof(arr[0]);
+	vector<int> sizes = {1000, 10000, 100000, 1000000};
+	ofstream outfile("lab1/outputs/binarysearch_times.csv");
+	outfile << "n,time_ms\n";
 
-	int res = binary_search(arr, target, n);
+	for (int n : sizes){
+		vector<int> arr = generate_sorted_array(n);
+		int target = arr[rand() % arr.size()];
 
-	if (res != -1){
-		cout << "Target found at " << res << endl;
+		auto start = chrono::high_resolution_clock::now();
+		int res = binary_search(arr, target);
+		auto end = chrono::high_resolution_clock::now();
+
+		bool found = (res != -1);
+		double ms = chrono::duration<double, milli>(end - start).count();
+		cout << "n=" << n << "  found=" << found << "  time=" << ms << "ms" << endl;
+		outfile << n << "," << ms << "\n";
 	}
 
-	else{
-		cout << "Target not found" << endl;
-	}
-	
+	outfile.close();
+	return 0;
 }
