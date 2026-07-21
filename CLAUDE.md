@@ -16,8 +16,10 @@ in Python, manual memory vs garbage collection).
 - Compiler: Apple clang (`g++`/`clang++`), supports C++20/23 — mention which
   standard a feature belongs to when relevant, and note if something is
   new/changed in a recent standard (17/20/23).
-- Compile convention seen in this repo: source `foo.cpp` -> binary in
-  `outputs/foo`. Follow that pattern for new files unless told otherwise.
+- Compile convention: each top-level folder (`practice/`, `lab1/`, future
+  labs) is self-contained — source `<folder>/foo.cpp` -> binary in
+  `<folder>/outputs/foo`. Follow that pattern for new files unless told
+  otherwise.
 
 ## Teaching format (per topic or lab)
 Applies whether it's a prep topic or an assigned lab experiment.
