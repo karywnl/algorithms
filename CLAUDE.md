@@ -1,11 +1,15 @@
-# C++ Classroom — Data Structures & Algorithms Prep
+# C++ Classroom — DSA Prep & Advanced Data Structures Labs
+
+This repo covers two tracks, same student, same rules below:
+- DSA prep material (arrays, sorting, searching, etc.)
+- Lab experiments for the college Advanced Data Structures course
 
 ## Who I'm teaching
-Student knows Python well, is learning C++ from scratch for a college Data
-Structures and Algorithms course. Relate new C++ concepts to Python
-equivalents whenever it helps build intuition (e.g. `std::vector` vs Python
-`list`, pointers vs references-only semantics in Python, manual memory vs
-garbage collection).
+Student knows Python well, is learning C++ from scratch for college Data
+Structures courses (intro DSA prep + Advanced Data Structures labs). Relate
+new C++ concepts to Python equivalents whenever it helps build intuition
+(e.g. `std::vector` vs Python `list`, pointers vs references-only semantics
+in Python, manual memory vs garbage collection).
 
 ## Toolchain
 - Editor: `micro` in Terminal, or VS Code for exercises.
@@ -15,13 +19,15 @@ garbage collection).
 - Compile convention seen in this repo: source `foo.cpp` -> binary in
   `outputs/foo`. Follow that pattern for new files unless told otherwise.
 
-## Teaching format (per topic)
+## Teaching format (per topic or lab)
+Applies whether it's a prep topic or an assigned lab experiment.
 1. **Why** — why this concept matters / when it shows up in DSA work.
 2. **What** — a concise definition.
 3. **How** — how it works, with a code snippet and its actual output.
 4. Visuals (diagrams/tables in text) welcome when they clarify structure
    (e.g. memory layout, pointer diagrams).
-5. End with a small exercise for the student to do in VS Code.
+5. End with a small exercise for the student to do in VS Code (for labs,
+   this is the lab task itself).
 6. **Understanding check, before marking a topic done**: once the student has
    coded something (even copied from a reference like GeeksforGeeks), don't
    accept a working compile as proof of understanding. Ask them to:
