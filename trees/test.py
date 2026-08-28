@@ -55,7 +55,7 @@ class LinkedBST:
 
         self.inorder(root.left)
         print(root.value, end=" ")
-        self.inorder(self.right)
+        self.inorder(root.right)
         
 
 bst = LinkedBST()
