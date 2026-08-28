@@ -49,21 +49,23 @@ class LinkedBST:
 
         return root
 
-    def inorder(self):
-        self._inorder(self.root)
-
-    def _inorder(self, root):
+    def inorder(self, root):
         if root is None:
-            return None
+            return 
 
-        self._inorder(root.left)
+        self.inorder(root.left)
         print(root.value, end=" ")
-        self._inorder(root.right)
-
+        self.inorder(self.right)
+        
 
 bst = LinkedBST()
 values = [20, 10, 30, 5, 50]
 for x in values:
     bst.root = bst.insert(bst.root, x)
 
-bst.inorder()
+bst.inorder(bst.root)
+
+bst.root = bst.delete(bst.root, 20)
+
+print()
+bst.inorder(bst.root)
