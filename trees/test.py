@@ -25,29 +25,7 @@ class LinkedBST:
             return None
 
         if value < root.value:
-            root.left = self.delete(root.left, value)
-
-        elif value > root.value:
-            root.right = self.delete(root.right, value)
-
-        else:
-
-            if root.left is None:
-                return root.right
-
-            if root.right is None:
-                return root.left
-
-            successor = root.right
-
-            while successor.left is not None:
-                successor = successor.left
-
-            root.value = successor.value
-            root.right = self.delete(root.right, successor.value)
-
-
-        return root
+            root.left = self.delete()
 
     def inorder(self, root):
         if root is None:
