@@ -13,7 +13,7 @@ def delete(tree, value):
 
     # selecting the last node for none
     last_idx = -1
-    while not tree[last_idx]:
+    while tree[last_idx] is None:
         last_idx -= 1
         tree.pop()
 
