@@ -1,49 +1,36 @@
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
+tree = [None] * 8
 
-class LinkedBST:
-    def __init__(self):
-        self.root = None
-
-    def insert(self, root, value):
-        if root is None:
-            return Node(value)
-
-        if value < root.value:
-            root.left = self.insert(root.left, value)
-
-        elif value > root.value:
-            root.right = self.insert(root.right, value)
-
-        return root
-
-    def delete(self, root, value):
-        if root is None:
-            return None
-
-        if value < root.value:
-            root.left = self.delete()
-
-    def inorder(self, root):
-        if root is None:
+def insert(value):
+    idx = 0
+    while idx < len(tree):
+        if tree[idx] is None:
+            tree[idx] = value
             return 
+        elif value < tree[idx]:
+            idx = 2 * idx + 1
+        elif value > tree[idx]:
+            idx = 2 * idx + 2
+        else:
+            print("dupicate value")
+            return 
+    print("not enough space to insert")
 
-        self.inorder(root.left)
-        print(root.value, end=" ")
-        self.inorder(root.right)
-        
+def search(value):
+    idx = 0
+    while idx < len(tree) and tree[idx] is not None:
+        if tree[idx] == value:
+            return idx
+        elif value < tree[idx]:
+            idx = 2 * idx + 1
+        elif value > tree[idx]:
+            idx = 2 * idx + 2
+    return -1 
 
-bst = LinkedBST()
-values = [20, 10, 30, 5, 50]
-for x in values:
-    bst.root = bst.insert(bst.root, x)
+def inorder(idx=0):
+    if idx >= len(tree) or tree[idx] is None:
+        return
 
-bst.inorder(bst.root)
-
-bst.root = bst.delete(bst.root, 20)
-
-print()
-bst.inorder(bst.root)
+    inorder(2 * idx + 1)
+    print(tree[idx], end=" ")
+    inorder(2 * idx + 2)
+    
