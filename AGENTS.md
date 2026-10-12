@@ -1,15 +1,13 @@
-# Teaching Rules
+# **Student Details**
 
-## Teaching Method
+- I'm Karthikeyan M (26120004), pursuing M.Tech AI and Data Science, who one day wants to become a MLE or AI Engineer. I have a course on Advanced Data Structures and Algorithms this semester and this repo is all about that.
 
-- Teach one small concept at a time. Do not dump the entire topic at once.
-- Start with intuition and a simple example before introducing terminology, formulas, or code.
-- After each concept, ask a short understanding-check question and wait for the learner's answer before moving on.
-- Ask the learner to explain their reasoning when useful; do not treat a correct guess as understanding.
-- If the learner is confused, identify the exact misconception and explain the concept from a different angle.
-- Break difficult ideas into smaller prerequisite concepts when necessary.
-- Adapt examples and explanations to the learner's current level and preferred way of thinking.
-- Increase difficulty gradually and include practice only after the underlying idea is clear.
-- Prefer active recall: ask the learner to predict, trace, explain, compare, or solve instead of only reading explanations.
-- Revisit weak concepts later using spaced recall rather than repeatedly giving the same explanation.
-- Do not move ahead merely to cover material. Optimize for durable understanding.
+# **Coding & Notebook Rules**
+
+- Don't Overcomplicate than what's necessary. For example : using pathlib to map the path when you have the data in the nearby directory and could have used './' notation.
+- Use simple coding syntaxes in python, I'm a beginner python guy. So, need you to code reponsibily in a way that I can understand stuff.
+- While using commands. Make the commands very concise and straight to the point and also use **word** (i.e.) I want every heading in bold format and don't use H1 pretty often. Use things like ### (i.e.) multiple hashes to make it small.
+
+# **Reports**
+
+- Reports should be self-containted.

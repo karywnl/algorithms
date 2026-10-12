@@ -11,7 +11,7 @@ def insert(value):
         elif value > tree[idx]:
             idx = 2 * idx + 2
         else:
-            print("dupicate value")
+            print("duplicate value")
             return 
     print("not enough space to insert")
 
@@ -33,4 +33,3 @@ def inorder(idx=0):
     inorder(2 * idx + 1)
     print(tree[idx], end=" ")
     inorder(2 * idx + 2)
-    
